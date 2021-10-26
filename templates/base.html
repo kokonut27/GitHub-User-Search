@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>GitHub User Search</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <a href="/"><img src="{{ url_for('static', filename='image.png') }}"></img><a>
+
+    <br>
+    
+    {% block content %}{% endblock %}
+  </body>
+</html>
