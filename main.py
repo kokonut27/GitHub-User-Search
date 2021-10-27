@@ -13,6 +13,7 @@ app = Flask(__name__,
             template_folder='templates')
 app.config["SECRET_KEY"] = os.environ["key"]
 app.config["SESSION_PERMANENT"] = False
+app.config["REPL_USER"] = os.environ["REPL_OWNER"]
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
@@ -42,11 +43,14 @@ def searchvalue():
     url = "https://github.com/"+data2
     userexist = requests.get(url)
     status = userexist.status_code
+
+    print(status)
     
-    if status != 200:
-      return render_template(
-        "nouser.html"
-      )
+    if status == 200:
+      session["USEREXIST"] = True
+    else:
+      session["USEREXIST"] = False
+      return redirect(url_for("nouser"))
     userdata2 = git_api.User(data2).User()
     data = json.loads(userdata2)
     name = data["data"]["user"]["name"]
@@ -70,7 +74,7 @@ def searchvalue():
     session["usernick"] = name
     session["username"] = username
     session["avatar"] = avatar
-  return redirect(url_for('search'))
+  return redirect(url_for('nouser'))
 
 '''@app.route('/delete_session')
 def delete_session():
@@ -88,6 +92,12 @@ def avatar():
     'static/', session["avatar"], as_attachment=True
   )
 
+@app.route('/nouser')
+def nouser():
+  if session.get("USEREXIST") == False:
+    return render_template("nouser.html")
+  else:
+    return redirect(url_for("search"))
 
 @app.errorhandler(404)
 def page_not_found(e):
