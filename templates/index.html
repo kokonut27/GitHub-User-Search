@@ -6,14 +6,16 @@
       // let searchbtn = document.getElementById("searchbtn");
       let searchvalue = document.getElementById("searchval").value;
         
-      $.post( "/search", {
+      $.post( "/searchvalue", {
         data: searchvalue
       });
     };
   </script>
-    
-  <input type="text" id="searchval" placeholder="Search github user"></input>
-  <button type="button" name="search" id="searchbtn" onclick="SearchFunction()"><a style="text-decoration:none; color: black" href="{{ url_for('search') }}">Search</a></button>
+  
+  <form action="{{ url_for('searchvalue') }}" method="POST">
+    <input type="text" id="searchval" placeholder="Search github user"></input>
+    <button type="button" name="search" id="searchbtn" onclick="SearchFunction()"><a style="text-decoration:none; color: black" href="{{ url_for('searchvalue') }}">Search</a></button>
+  </form>
   <!--<p id="demo"></p>-->
 
 {% endblock %}
