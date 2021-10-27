@@ -6,6 +6,8 @@ from flask_session import Session
 import requests
 import shutil
 # import wget
+import numpy as np
+from PIL import Image
 
 app = Flask(__name__,
             static_url_path='', 
@@ -32,7 +34,6 @@ def search():
     "search.html",
     usernick = session.get("usernick"),
     username = session.get("username"),
-    avatar = session.get("avatar"),
   )
 
 
@@ -64,16 +65,23 @@ def searchvalue():
         
       with open("static/"+filename, 'wb') as f:
         shutil.copyfileobj(res.raw, f)
-      
-      avatar = filename
+
+      """
+      w,h = 100, 100
+      with open("static/"+filename, 'rb') as f2:
+        d = np.fromfile(f2,dtype=np.uint8,count=w*h).reshape(h,w)
+
+      PILimage = Image.fromarray(d)
+      PILimage.save('avatar.png')
+      """      
       f.close()
+      # f2.close()
       
     else:
       avatar = "Image can't be opened!"
 
     session["usernick"] = name
     session["username"] = username
-    session["avatar"] = avatar
   return redirect(url_for('nouser'))
 
 '''@app.route('/delete_session')
