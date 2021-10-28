@@ -104,18 +104,10 @@ python-versions = ">=3.6"
 [package.extras]
 watchdog = ["watchdog"]
 
-[[package]]
-name = "wget"
-version = "3.2"
-description = "pure python download utility"
-category = "main"
-optional = false
-python-versions = "*"
-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "5ffa97fdbcfc6da988230e91273cf1f23eed649803b3cc96a036defab148e0f0"
+content-hash = "e4ffaea178c4ac5eea10316193340829e87bea3965a947edcd6c7ba5b2ba6c65"
 
 [metadata.files]
 cachelib = [
@@ -224,7 +216,4 @@ markupsafe = [
 werkzeug = [
     {file = "Werkzeug-2.0.2-py3-none-any.whl", hash = "sha256:63d3dc1cf60e7b7e35e97fa9861f7397283b75d765afcaefd993d6046899de8f"},
     {file = "Werkzeug-2.0.2.tar.gz", hash = "sha256:aa2bb6fc8dee8d6c504c0ac1e7f5f7dc5810a9903e793b6f715a9f015bdadb9a"},
-]
-wget = [
-    {file = "wget-3.2.zip", hash = "sha256:35e630eca2aa50ce998b9b1a127bb26b30dfee573702782aa982f875e3f16061"},
 ]

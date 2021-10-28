@@ -5,9 +5,6 @@ import os
 from flask_session import Session
 import requests
 import shutil
-# import wget
-import numpy as np
-from PIL import Image
 
 app = Flask(__name__,
             static_url_path='', 
@@ -17,6 +14,8 @@ app.config["SECRET_KEY"] = os.environ["key"]
 app.config["SESSION_PERMANENT"] = False
 app.config["REPL_USER"] = os.environ["REPL_OWNER"]
 app.config["SESSION_TYPE"] = "filesystem"
+app.config["static"] = 'static/'
+git_api.Token(os.environ["token"])
 Session(app)
 
 
@@ -26,14 +25,13 @@ def index():
     "index.html",
   )
 
-git_api.Token(os.environ["token"])
-
 @app.route('/search')
 def search():
   return render_template(
     "search.html",
     usernick = session.get("usernick"),
     username = session.get("username"),
+    avatar = session.get("avatar"),
   )
 
 
@@ -44,13 +42,10 @@ def searchvalue():
     url = "https://github.com/"+data2
     userexist = requests.get(url)
     status = userexist.status_code
-
-    print(status)
     
     if status == 200:
-      session["USEREXIST"] = True
+      pass
     else:
-      session["USEREXIST"] = False
       return redirect(url_for("nouser"))
     userdata2 = git_api.User(data2).User()
     data = json.loads(userdata2)
@@ -65,24 +60,21 @@ def searchvalue():
         
       with open("static/"+filename, 'wb') as f:
         shutil.copyfileobj(res.raw, f)
-
-      """
-      w,h = 100, 100
-      with open("static/"+filename, 'rb') as f2:
-        d = np.fromfile(f2,dtype=np.uint8,count=w*h).reshape(h,w)
-
-      PILimage = Image.fromarray(d)
-      PILimage.save('avatar.png')
-      """      
-      f.close()
-      # f2.close()
       
+      avatar = filename
+      if avatar != None:
+        return send_from_directory(
+          app.config['static'], filename, as_attachment=True
+        )
+      f.close()
     else:
-      avatar = "Image can't be opened!"
+      pass # add something here - error
 
     session["usernick"] = name
     session["username"] = username
-  return redirect(url_for('nouser'))
+    session["avatar"] = avatar
+    print(session.get("usernick"))
+  return redirect(url_for('search'))
 
 '''@app.route('/delete_session')
 def delete_session():

@@ -10,3 +10,7 @@ function SearchFunction() {
 // $.get("/retrievegithubdata", function(data) {
 //     console.log($.parseJSON(data))
 // })
+
+document.getElementById('search-text').hover = function() {
+	document.getElementById('search-text').classList.toggle('show');
+}
