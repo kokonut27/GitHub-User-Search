@@ -1,10 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <style>
+    img {
+      border-radius: 20px;
+      vertical-align: middle;
+    }
+
+    .user {
+      border: 3px solid black;
+      border-radius: 15px;
+      width: 30%;
+      margin: auto;
+      opacity: 0.9;
+      transition: 0.7s;
+    }
+
+    .user:hover {
+      box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+      opacity: 1;
+    }
+  </style>
   
-  
-  {{ avatar }}
-  <h1> {{ username }} </h1>
-  <h2> {{ usernick }} </h2>
+  <a style="color: black;" href= {{ userurl }}> <div class="user">
+    <img src="{{ url_for('static', filename=avatar) }}" height="75" width="75"><h2 style="display: inline-block; text-indent: 5px;"> {{ usernick }} </h2>
+    <h4 style="margin: 0;"> @{{ username }} </h4>
+    <p style="color: #545a63"> {{ bio }} </p>
+  </div></a>
+
+  <br><br>
+
+  <a style="text-align: left; color: black;" href="{{ url_for('index') }}">️️️ ⬅️ ️B️a️c️k️️ ️</a>️
 
 {% endblock %}

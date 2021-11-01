@@ -32,6 +32,8 @@ def search():
     usernick = session.get("usernick"),
     username = session.get("username"),
     avatar = session.get("avatar"),
+    userurl = session.get("userurl"),
+    bio = session.get("bio"),
   )
 
 
@@ -39,18 +41,25 @@ def search():
 def searchvalue():
   if request.method == "POST":
     data2 = request.form["data"]
-    url = "https://github.com/"+data2
+    """url = "https://github.com/"+data2
     userexist = requests.get(url)
     status = userexist.status_code
     
     if status == 200:
       pass
     else:
-      return redirect(url_for("nouser"))
+      return redirect(url_for("nouser"))"""
+    url = f"https://github.com/{data2}"
+    userurl = url
     userdata2 = git_api.User(data2).User()
     data = json.loads(userdata2)
     name = data["data"]["user"]["name"]
+    if name == None:
+      name = ""
     username = data2
+
+    bio = data["data"]["user"]["bio"]
+    print(bio)
 
     image_url = data["data"]["user"]["avatarLink"]
     filename = image_url.split("/")[-1]
@@ -62,10 +71,10 @@ def searchvalue():
         shutil.copyfileobj(res.raw, f)
       
       avatar = filename
-      if avatar != None:
+      """if avatar != None:
         return send_from_directory(
           app.config['static'], filename, as_attachment=True
-        )
+        )"""
       f.close()
     else:
       pass # add something here - error
@@ -73,7 +82,8 @@ def searchvalue():
     session["usernick"] = name
     session["username"] = username
     session["avatar"] = avatar
-    print(session.get("usernick"))
+    session["userurl"] = userurl
+    session["bio"] = bio
   return redirect(url_for('search'))
 
 '''@app.route('/delete_session')

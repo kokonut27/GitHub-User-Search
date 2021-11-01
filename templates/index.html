@@ -5,6 +5,7 @@
     function SearchFunction() {
       // let searchbtn = document.getElementById("searchbtn");
       let searchvalue = document.getElementById("searchval").value;
+      // alert(searchvalue)
         
       $.post( "/searchvalue", {
         data: searchvalue
@@ -12,17 +13,8 @@
     };
   </script>
   
-
-<!--<div class="container">
-  <input type="text" id="searchval" placeholder="Search github user" class="image"></input>
-  <div class="overlay">
-    <div class="text">Hello World</div>
-  </div>
-</div>-->
-  <form action="{{ url_for('searchvalue') }}" method="POST">
-    <input type="text" id="searchval" placeholder="Search github user"></input>
-    <button type="button" id="searchbtn" onclick="SearchFunction()"><a style="text-decoration:none; color: black" href="{{ url_for('searchvalue') }}">Search</a></button>
-  </form>
-  <!--<p id="demo"></p>-->
+  <br>
+  <input type="text" id="searchval" placeholder="Search github user"></input>
+  <button type="button" id="searchbtn" onclick="SearchFunction()"><a style="text-decoration:none; color: black" href="{{ url_for('searchvalue') }}">Search</a></button>
 
 {% endblock %}
