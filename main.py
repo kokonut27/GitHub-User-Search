@@ -37,8 +37,11 @@ def search():
   )
 
 
+n = True
+
 @app.route('/searchvalue', methods=["POST", "GET"])
 def searchvalue():
+  global n
   if request.method == "POST":
     data2 = request.form["data"]
     """url = "https://github.com/"+data2
@@ -59,7 +62,6 @@ def searchvalue():
     username = data2
 
     bio = data["data"]["user"]["bio"]
-    print(bio)
 
     image_url = data["data"]["user"]["avatarLink"]
     filename = image_url.split("/")[-1]
@@ -71,10 +73,12 @@ def searchvalue():
         shutil.copyfileobj(res.raw, f)
       
       avatar = filename
+
       """if avatar != None:
         return send_from_directory(
           app.config['static'], filename, as_attachment=True
         )"""
+          
       f.close()
     else:
       pass # add something here - error
