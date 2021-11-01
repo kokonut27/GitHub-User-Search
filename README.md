@@ -12,6 +12,21 @@ This is a project I decided to make for Kajam, but I decided to choose a differe
 ## Using it
 Unfortunately, as of right now, you need to **fork** the repl. I am working on fixing that error, but it is still functional (when you fork it.). Please enjoy using it, and leave suggestions in the comments as well! Thanks!
 
+## Screenshots
+#### Main page:
+![Screenshot 2021-11-01 7.08.30 PM](https://storage.googleapis.com/replit/images/1635808343260_218127d12259750127b69e029f4ef134.png)
+
+
+#### Example searches:
+![Screenshot 2021-11-01 7.12.04 PM](https://storage.googleapis.com/replit/images/1635808426114_c49a76fc6afb08cf7af7c3474f2f5ce4.png)
+![Screenshot 2021-11-01 7.11.25 PM](https://storage.googleapis.com/replit/images/1635808373917_48aa5aeaaf748e4a269777d0eb242fd5.png)
+--- 
+![Screenshot 2021-11-01 7.11.58 PM](https://storage.googleapis.com/replit/images/1635808505966_66a62e5f20f665184b401ee63c78c442.png)
+![Screenshot 2021-11-01 7.11.45 PM](https://storage.googleapis.com/replit/images/1635808479099_af5028d2012d28c3dd0b09f190464070.png)
+
+> **I'm super sorry for my lame screenshots, I'll try and work on making the project work on the original Repl!**
+
+
 ## How it works
 So the main piece to this project was [git_api](https://github.com/JBYT27/GitAPI), which is a package I created to retrieve GitHub stats through python. The next main piece to this project is sending and retrieving requests and data, which @Highwayman explained to me very thoroughly (thanks ^^) [here](https://replit.com/talk/ask/How-to-retrieving-JavaScript-variable-data-using-Python/147113). The final piece was the CSS and the HTML, which was basically all markup or styling. To explain it much, much, *much* thoroughly, read below.
 
