@@ -90,3 +90,9 @@ The Code of Conduct is located [here](https://github.com/JBYT27/GitHub-User-Sear
 ### Project link
 The project link is [here](https://GitHub-User-Search.jbloves27.repl.co). 
 > You should probably fork it however, and then use it from there.
+
+### Features
+- [ ] Dark mode/light mode - `[Status: PENDING]`
+- [x] GitHub user information - `[Status: COMPLETE]`
+- [ ] CSS Animation - `[Status: IN PROGRESS]`
+- [ ] Additional features - `[Status: IN PROGRESS]`
