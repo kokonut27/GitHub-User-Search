@@ -96,3 +96,4 @@ The project link is [here](https://GitHub-User-Search.jbloves27.repl.co).
 - [x] GitHub user information - `[Status: COMPLETE]`
 - [ ] CSS Animation - `[Status: IN PROGRESS]`
 - [ ] Additional features - `[Status: IN PROGRESS]`
+- [ ] Errors and error redirects - `[Status: IN PROGRESS]`
