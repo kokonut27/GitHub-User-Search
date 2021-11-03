@@ -1,7 +1,7 @@
 # GitHub User Search
 > Created using [Python3](https://python.org) and [git_api](https://pypi.org/project/git-api/), coded by [JBYT27](https://github.com/JBYT27).
 
-> **IMPORTANT: You must fork the Repl to access it as of right now. If you are viewing this on GitHub, this should be the same as well. You should also visit [this](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for the token (git_api). Thank you in advance!**
+> **IMPORTANT: You must fork the Repl to access it as of right now. If you are viewing this on GitHub, this should be the same as well. Thank you in advance!**
 
 
 ## About
@@ -10,7 +10,7 @@ This is a project I decided to make for Kajam, but I decided to choose a differe
 > _**Please note that it takes a few times to reload for the correct information to come up. We will try to solve that problem as soon as we can. Thank you!**_
 
 ## Using it
-Unfortunately, as of right now, you need to **fork** the repl. I am working on fixing that error, but it is still functional (when you fork it.). Also note that you need to create a GitHub token (which you can read about [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)), and you need to create a key, which can be random bytes. Please enjoy using it, and leave suggestions in the comments as well! Thanks!
+Unfortunately, as of right now, you need to **fork** the repl. I am working on fixing that error, but it is still functional (when you fork it.). Please enjoy using it, and leave suggestions in the comments as well! Thanks!
 
 ## Screenshots
 #### Main page:
