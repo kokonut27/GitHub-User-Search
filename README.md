@@ -24,7 +24,7 @@ All you need to do is enter a GitHub username in the textbox, press the search b
 To view how it works, go [here](https://github.com/JBYT27/GitHub-User-Search/blob/main/howitworks.md) to read it.
 
 ## Conclusion
-I hope you enjoy using this! To contribute, you can either leave a comment on the [Replit Spotlight](https://replit.com/@JBloves27/GitHub-User-Search?v=1) post, the Replit post, or leave a PR on the [GitHub](https://github.com/JBYT27/GitHub-User-Search) page. Stay well!
+I hope you enjoy using this! To contribute, you can either leave a comment on the [Replit Spotlight](https://replit.com/@JBloves27/GitHub-User-Search?v=1) post, the Replit [post](http://replit.com/talk/share/sparkles-GitHub-User-Search-Search-all-GitHub-Users-sparkles/147895), or leave a PR on the [GitHub](https://github.com/JBYT27/GitHub-User-Search) page. Stay well!
 
 ## Important Links
 ### License
