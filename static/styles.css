@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@500&display=swap');
 
+div {
+  text-align: center;
+}
+
 body {
   background-color: white;
   text-align: center;
@@ -34,6 +38,7 @@ button:hover {
   margin: auto;
   opacity: 0.9;
   transition: 0.7s;
+  color: #333
 }
 
 .user:hover {
@@ -47,6 +52,31 @@ input, button {
   padding: 10px;
   background: none;
   outline: none;
+}
+
+#navbar {
+  margin: auto;
+  overflow: hidden;
+  background-color: #85aeed;
+  border-radius: 15px;
+  width: 15%;
+  padding: 5px;
+  display: inline-block;
+}
+
+#navbar a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.75s;
+  float: center;
+}
+
+#navbar a:hover {
+  opacity: 1;
 }
 
 /* trashed as of right now

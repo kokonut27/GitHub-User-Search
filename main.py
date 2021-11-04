@@ -87,10 +87,14 @@ def searchvalue():
       pass # add something here - error
 
     session["usernick"] = name
+    if session.get("usernick") == None:
+      session["usernick"] = "No Nickname!"
     session["username"] = username
     session["avatar"] = avatar
     session["userurl"] = userurl
     session["bio"] = bio
+    if session.get("bio") == None:
+      session["bio"] = "This user does not have a bio"
   return redirect(url_for('search'))
 
 '''@app.route('/delete_session')
