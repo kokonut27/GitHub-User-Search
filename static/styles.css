@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@500&display=swap');
+
 body {
   background-color: white;
   text-align: center;
+  font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 a {
