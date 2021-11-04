@@ -1,8 +1,6 @@
 # GitHub User Search
 > Created using [Python3](https://python.org) and [git_api](https://pypi.org/project/git-api/), coded by [JBYT27](https://github.com/JBYT27).
 
-> **IMPORTANT: You must fork the Repl to access it as of right now. If you are viewing this on GitHub, this should be the same as well. You should also visit [this](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) for the token (git_api). Thank you in advance!**
-
 
 ## About
 This is a project I decided to make for Kajam, but I decided to choose a different idea for the jam, so this is just your ordinary project. (*You can find the package [here](https://pypi.org/project/git-api/).*) So this is basically a clone of @RayhanADev's [Replit User Search](https://replit-user-search-v3.rayhanadev.repl.co/). I tried recreating that, but it retrieves GitHub user info. You just insert your name inside the textbox, press the search button, and it should retrive the GitHub user info!
@@ -10,7 +8,7 @@ This is a project I decided to make for Kajam, but I decided to choose a differe
 > _**Please note that it takes a few times to reload for the correct information to come up. We will try to solve that problem as soon as we can. Thank you!**_
 
 ## Using it
-Unfortunately, as of right now, you need to **fork** the repl. I am working on fixing that error, but it is still functional (when you fork it.). Also note that you need to create a GitHub token (which you can read about [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)), and you need to create a key, which can be random bytes. Please enjoy using it, and leave suggestions in the comments as well! Thanks!
+All you need to do is enter a GitHub username in the textbox, press the search button, and the data will come up. Note that it takes a few times to reload for the correct info to show up. Please enjoy using it, and leave suggestions in the comments as well! Thanks!
 
 ## Screenshots
 #### Main page:
@@ -24,11 +22,11 @@ Unfortunately, as of right now, you need to **fork** the repl. I am working on f
 ![Screenshot 2021-11-01 7.11.58 PM](https://storage.googleapis.com/replit/images/1635808505966_66a62e5f20f665184b401ee63c78c442.png)
 ![Screenshot 2021-11-01 7.11.45 PM](https://storage.googleapis.com/replit/images/1635808479099_af5028d2012d28c3dd0b09f190464070.png)
 
-> **I'm super sorry for my lame screenshots, I'll try and work on making the project work on the original Repl!**
+> **I'm super sorry for my lame screenshots lol**
 
 
 ## How it works
-So the main piece to this project was [git_api](https://github.com/JBYT27/GitAPI), which is a package I created to retrieve GitHub stats through python. The next main piece to this project is sending and retrieving requests and data, which @Highwayman explained to me very thoroughly (thanks ^^) [here](https://replit.com/talk/ask/How-to-retrieving-JavaScript-variable-data-using-Python/147113). The final piece was the CSS and the HTML, which was basically all markup or styling. To explain it much, much, *much* thoroughly, read below.
+So the main piece to this project was [git_api](https://github.com/JBYT27/GitAPI), which is a package I created to retrieve GitHub stats through python. The next main piece to this project is sending and retrieving requests and data, which @Highwayman explained to me very thoroughly (thanks ^^) [here](https://replit.com/talk/ask/How-to-retrieving-JavaScript-variable-data-using-Python/147113). The final piece was the CSS and the HTML, which was basically all markup or styling. To explain it much, much, *much* thoroughly, read below. Also, thanks to @DillonB07 for helping me test some errors and solve some errors!
 
 ### The very thorough explanation ^^
 So the first part to this project was git_api, mentioned before above. git_api is a package that retrieves GitHub data through queries and graphql, which can be read about [here](https://docs.github.com/en/graphql). By using git_api, I could retrieve github data very successfully, however I stumbled upon a big roadblock that frankly, stumped me for a while.
@@ -89,11 +87,11 @@ The Code of Conduct is located [here](https://github.com/JBYT27/GitHub-User-Sear
 
 ### Project link
 The project link is [here](https://GitHub-User-Search.jbloves27.repl.co). 
-> You should probably fork it however, and then use it from there.
 
 ### Features
 - [ ] Dark mode/light mode - `[Status: PENDING]`
 - [x] GitHub user information - `[Status: COMPLETE]`
-- [ ] CSS Animation - `[Status: IN PROGRESS]`
+- [x] CSS Animation - `[Status: IN PROGRESS]`
+  - [ ] Professional CSS - `[Status: INCOMPLETE]`
 - [ ] Additional features - `[Status: IN PROGRESS]`
 - [ ] Errors and error redirects - `[Status: IN PROGRESS]`

@@ -36,12 +36,13 @@ def search():
     bio = session.get("bio"),
   )
 
-
-n = True
+@app.route('/nouser')
+def nouser():
+  return render_template("nouser.html")
 
 @app.route('/searchvalue', methods=["POST", "GET"])
 def searchvalue():
-  global n
+  # global name
   if request.method == "POST":
     data2 = request.form["data"]
     """url = "https://github.com/"+data2
@@ -57,11 +58,8 @@ def searchvalue():
     userdata2 = git_api.User(data2).User()
     data = json.loads(userdata2)
     name = data["data"]["user"]["name"]
-    if name == None:
-      name = ""
-    username = data2
-
     bio = data["data"]["user"]["bio"]
+    username = data2
 
     image_url = data["data"]["user"]["avatarLink"]
     filename = image_url.split("/")[-1]
@@ -106,15 +104,12 @@ def avatar():
     'static/', session["avatar"], as_attachment=True
   )
 
-@app.route('/nouser')
-def nouser():
-  if session.get("USEREXIST") == False:
-    return render_template("nouser.html")
-  else:
-    return redirect(url_for("search"))
-
 @app.errorhandler(404)
 def page_not_found(e):
   return render_template('404.html')
+
+@app.errorhandler(500)
+def page_not_found2(e):
+  return render_template("nouser.html") # The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!
   
 app.run(host="0.0.0.0", port=8080)
