@@ -22,7 +22,7 @@ All you need to do is enter a GitHub username in the textbox, press the search b
 
 
 ## How it works
-To view how it works, go [here]().
+To view how it works, go [here](https://github.com/JBYT27/GitHub-User-Search/blob/main/howitworks.md).
 
 ## Conclusion
 I hope you enjoy using this. To contribute, you can either leave a comment on the [Replit Spotlight](https://replit.com/@JBloves27/GitHub-User-Search?v=1) post, the Replit post, or leave a PR on the [GitHub](https://github.com/JBYT27/GitHub-User-Search) page. Stay well!
