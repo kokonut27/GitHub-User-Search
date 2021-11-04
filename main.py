@@ -44,6 +44,11 @@ def nouser():
 def searchvalue():
   # global name
   if request.method == "POST":
+    session["usernick"] = "No User Exists!"
+    session["username"] = "NoUserExists"
+    session["avatar"] = 'nothing.jpg'
+    session["userurl"] = "https://github.com/404"
+    session["bio"] = "No Bio Exists!"
     data2 = request.form["data"]
     """url = "https://github.com/"+data2
     userexist = requests.get(url)

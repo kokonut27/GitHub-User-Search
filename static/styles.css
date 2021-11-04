@@ -18,6 +18,7 @@ button {
   color: gainsboro;
   opacity: 0.7;
   border-radius: 7.5px;
+  transition: 0.5s;
 }
 
 button:hover {
@@ -27,7 +28,7 @@ button:hover {
 }
 
 .user {
-  border: 3px solid black;
+  border: 3px solid #85aeed;
   border-radius: 15px;
   width: 30%;
   margin: auto;
@@ -38,6 +39,14 @@ button:hover {
 .user:hover {
   box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
   opacity: 1;
+}
+
+input, button {
+  border: 1px solid #85aeed;
+  border-radius: 10px;
+  padding: 10px;
+  background: none;
+  outline: none;
 }
 
 /* trashed as of right now
