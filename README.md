@@ -1,4 +1,4 @@
-# GitHub User Search
+# GitHub User Search - Search all GitHub users!
 > Created using [Python3](https://python.org) and [git_api](https://pypi.org/project/git-api/), coded by [JBYT27](https://github.com/JBYT27).
 
 
