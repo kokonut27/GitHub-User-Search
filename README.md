@@ -43,3 +43,5 @@ The project link is [here](https://GitHub-User-Search.jbloves27.repl.co).
   - [ ] Professional CSS - `[Status: INCOMPLETE]`
 - [ ] Additional features - `[Status: IN PROGRESS]`
 - [ ] Errors and error redirects - `[Status: IN PROGRESS]`
+- [ ] Add docs - `[Status: IN PROGRESS]`
+- [ ] Add contributers route (maybe) - `[Status: INCOMPLETE]`

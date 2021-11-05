@@ -48,7 +48,8 @@ def searchvalue():
     session["username"] = "NoUserExists"
     session["avatar"] = 'nothing.jpg'
     session["userurl"] = "https://github.com/404"
-    session["bio"] = "No Bio Exists!"
+    session["bio"] = "This user does not have a bio"
+    session["avatarYN"] = "True"
     data2 = request.form["data"]
     """url = "https://github.com/"+data2
     userexist = requests.get(url)
@@ -77,10 +78,12 @@ def searchvalue():
       
       avatar = filename
 
-      """if avatar != None:
-        return send_from_directory(
-          app.config['static'], filename, as_attachment=True
-        )"""
+      """if session.get("avatarYN") == "True":
+        if avatar != None:
+          session["avatarYN"] = "False"
+          return send_from_directory(
+            app.config['static'], filename, as_attachment=True
+          )"""
           
       f.close()
     else:
@@ -95,6 +98,7 @@ def searchvalue():
     session["bio"] = bio
     if session.get("bio") == None:
       session["bio"] = "This user does not have a bio"
+    session["avatarYN"] = "False"
   return redirect(url_for('search'))
 
 '''@app.route('/delete_session')
