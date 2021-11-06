@@ -75,6 +75,10 @@ input, button {
   box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
 }
 
+.footer {
+  bottom: 0;
+}
+
 /* trashed as of right now
 .container {
   position: relative;
