@@ -44,4 +44,4 @@ The project link is [here](https://GitHub-User-Search.jbloves27.repl.co).
 - [ ] Additional features - `[Status: IN PROGRESS]`
 - [ ] Errors and error redirects - `[Status: IN PROGRESS]`
 - [ ] Add docs - `[Status: IN PROGRESS]`
-- [ ] Add contributers route (maybe) - `[Status: INCOMPLETE]`
+- [ ] Add contributers route (maybe) - `[Status: PENDING]`
