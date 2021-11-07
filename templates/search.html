@@ -1,33 +1,38 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<head>
+  <meta http-equiv="refresh" />
+</head>
+<style>
+  img {
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+</style>
 
-{% block content %}
-  <head>
-    <meta http-equiv="refresh">
-  </head>
-  <style>
-    img {
-      border-radius: 50%;
-      vertical-align: middle;
+<script>
+  window.onload = function () {
+    if (!window.location.hash) {
+      window.location = window.location + "#loaded";
+      window.location.reload();
     }
-  </style>
+  };
+</script>
 
-  <script>
-    window.onload = function() {
-      if(!window.location.hash) {
-          window.location = window.location + '#loaded';
-          window.location.reload();
-      }
-    }
-  </script>
-  
-  <a style="color: black;" href={{ userurl }}> <div class="user">
-    <img src="{{ url_for('static', filename=avatar) }}" height="75" width="75"><h2 style="display: inline-block; text-indent: 5px;"> {{ usernick }} </h2>
-    <h4 style="margin: 0;"> @{{ username }} </h4>
-    <p style="color: #545a63"> {{ bio }} </p>
-  </div></a>
+<a style="color: black" href="{{" userurl }}>
+  <div class="user">
+    <img
+      src="{{ url_for('static', filename=avatar) }}"
+      height="75"
+      width="75"
+    />
+    <h2 style="display: inline-block; text-indent: 5px">{{ usernick }}</h2>
+    <h4 style="margin: 0">@{{ username }}</h4>
+    <p style="color: #545a63">{{ bio }}</p>
+  </div></a
+>
 
-  <br><br>
+<br /><br />
 
-  <a style="text-align: left; color: black;" href="{{ url_for('index') }}">️️️ ⬅️ ️B️a️c️k️️ ️</a>️
-
-{% endblock %}
+<a style="text-align: left; color: black" href="{{ url_for('index') }}"
+  >️️️ ⬅️ ️B️a️c️k️️ ️</a
+>️ {% endblock %}

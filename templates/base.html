@@ -16,21 +16,22 @@
       Beta
     </div>
     -->
-    <a href="/"><div id="navbar">Home</div></a>
-    <a href="https://github.com/JBYT27" target="_blank"><div id="navbar">Owner</div></a>
-    <a href="https://github.com/JBYT27/GitHub-User-Search/blob/main/README.md" target="_blank"><div id="navbar">Docs</div></a>
-    <a href="https://github.com/JBYT27/GitAPI" target="_blank"><div id="navbar">GitAPI</div></a>
-    <br><br>
+    <div class='nav-container'>
+    <a href="/"><span class='navbar'>Home</span></a>
+    <a href="https://github.com/JBYT27" target="_blank"><span class="navbar">Owner</span></a>
+    <a href="https://github.com/JBYT27/GitHub-User-Search/blob/main/README.md" target="_blank"><span class="navbar">Docs</span></a>
+    <a href="https://github.com/JBYT27/GitAPI" target="_blank"><span class="navbar">GitAPI</span></a>
+  </div>
 
-    <a href="/"><img src="{{ url_for('static', filename='image.png') }}"></img><a>
+    <a href="/"><img src="{{ url_for('static', filename='image.png') }}" /><a>
 
-    <br><br>
+    <!-- <br><br> -->
     
     {% block content %}{% endblock %}
 
-    <br><br><br><br><br><br><br>
+    <!-- <br><br><br><br><br><br><br> -->
     <footer>
       <h5 class="footer">Copyright &copy 2021 JBYT27</h5>
     </footer>
-  </body>
-</html>
+  <!-- </body> -->
+<!-- </html> -->

@@ -1,0 +1,7 @@
+# .breakpoints
+/flask_session
+/venv
+.env
+debug.py
+/.vscode
+/__pycache__

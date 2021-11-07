@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@500&display=swap");
 
 div {
   text-align: center;
@@ -7,7 +7,7 @@ div {
 body {
   background-color: white;
   text-align: center;
-  font-family: 'Encode Sans Condensed', sans-serif;
+  font-family: "Encode Sans Condensed", sans-serif;
 }
 
 a {
@@ -28,7 +28,7 @@ button {
 button:hover {
   color: gray;
   opacity: 1;
-  // box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .user {
@@ -38,15 +38,16 @@ button:hover {
   margin: auto;
   opacity: 0.9;
   transition: 0.7s;
-  color: #333
+  color: #333;
 }
 
 .user:hover {
-  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
   opacity: 1;
 }
 
-input, button {
+input,
+button {
   border: 1px solid #85aeed;
   border-radius: 10px;
   padding: 10px;
@@ -54,7 +55,7 @@ input, button {
   outline: none;
 }
 
-#navbar {
+.navbar {
   margin: auto;
   overflow: hidden;
   background-color: #85aeed;
@@ -69,10 +70,9 @@ input, button {
   transition: 0.75s;
 }
 
-
 #navbar:hover {
   opacity: 1;
-  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
 .footer {
