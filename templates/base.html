@@ -26,7 +26,7 @@
       Beta
     </div>
     -->
-    <div class="nav-container">
+    <div class="flex-container">
       <a class="navbar" href="/">Home</a>
       <a class="navbar" href="https://github.com/JBYT27" target="_blank"
         >Owner</a
@@ -46,7 +46,7 @@
       ><img src="{{ url_for('static', filename='image.png') }}" /><a>
         <!-- <br><br> -->
 
-        {% block content %}{% endblock %}
+        <div class="flex-container">{% block content %}{% endblock %}</div>
 
         <!-- <br><br><br><br><br><br><br> -->
         <footer>

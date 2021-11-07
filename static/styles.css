@@ -55,7 +55,7 @@ button {
   outline: none;
 }
 
-.nav-container {
+.flex-container {
   display: flex;
   justify-content: center;
 }
@@ -96,7 +96,7 @@ a.navbar {
   }
 }
 
-#navbar:hover {
+.navbar:hover {
   opacity: 1;
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
 }
