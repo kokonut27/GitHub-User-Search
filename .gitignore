@@ -1,4 +1,4 @@
-# .breakpoints
+.breakpoints
 /flask_session
 /venv
 .env

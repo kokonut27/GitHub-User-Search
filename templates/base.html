@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub User Search</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.svg') }}">
-    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.svg') }}"
+    />
+    <link
+      href="{{ url_for('static', filename='styles.css') }}"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
     <!--
     <div class="beta">
       Beta
     </div>
     -->
-    <div class='nav-container'>
-    <a href="/"><span class='navbar'>Home</span></a>
-    <a href="https://github.com/JBYT27" target="_blank"><span class="navbar">Owner</span></a>
-    <a href="https://github.com/JBYT27/GitHub-User-Search/blob/main/README.md" target="_blank"><span class="navbar">Docs</span></a>
-    <a href="https://github.com/JBYT27/GitAPI" target="_blank"><span class="navbar">GitAPI</span></a>
-  </div>
+    <div class="nav-container">
+      <a class="navbar" href="/">Home</a>
+      <a class="navbar" href="https://github.com/JBYT27" target="_blank"
+        >Owner</a
+      >
+      <a
+        class="navbar"
+        href="https://github.com/JBYT27/GitHub-User-Search/blob/main/README.md"
+        target="_blank"
+        >Docs</a
+      >
+      <a class="navbar" href="https://github.com/JBYT27/GitAPI" target="_blank"
+        >GitAPI</a
+      >
+    </div>
 
-    <a href="/"><img src="{{ url_for('static', filename='image.png') }}" /><a>
+    <a href="/"
+      ><img src="{{ url_for('static', filename='image.png') }}" /><a>
+        <!-- <br><br> -->
 
-    <!-- <br><br> -->
-    
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
 
-    <!-- <br><br><br><br><br><br><br> -->
-    <footer>
-      <h5 class="footer">Copyright &copy 2021 JBYT27</h5>
-    </footer>
-  <!-- </body> -->
-<!-- </html> -->
+        <!-- <br><br><br><br><br><br><br> -->
+        <footer>
+          <h5 class="footer">Copyright &copy 2021 JBYT27</h5>
+        </footer>
+        <!-- </body> -->
+        <!-- </html> --></a
+      ></a
+    >
+  </body>
+</html>
