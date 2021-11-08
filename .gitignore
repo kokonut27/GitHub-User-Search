@@ -5,3 +5,4 @@
 debug.py
 /.vscode
 /__pycache__
+.dccache
