@@ -12,6 +12,7 @@
       href="{{ url_for('static', filename='styles.css') }}"
       rel="stylesheet"
     />
+    {% block head %}{% endblock %}
   </head>
   <body>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
