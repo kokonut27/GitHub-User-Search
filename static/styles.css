@@ -10,6 +10,10 @@ body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }
