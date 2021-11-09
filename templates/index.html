@@ -1,20 +1,27 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<script>
+  function SearchFunction() {
+    // let searchbtn = document.getElementById("searchbtn");
+    let searchvalue = document.getElementById("searchval").value;
+    // alert(searchvalue)
 
-{% block content %}
-  <script>
-    function SearchFunction() {
-      // let searchbtn = document.getElementById("searchbtn");
-      let searchvalue = document.getElementById("searchval").value;
-      // alert(searchvalue)
-        
-      $.post( "/searchvalue", {
-        data: searchvalue
-      });
-    };
-  </script>
-  
-  <br>
-  <input type="text" id="searchval" placeholder="Search github user"></input>
-  <button type="button" id="searchbtn" onclick="SearchFunction()"><a style="text-decoration:none; color: black" href="{{ url_for('searchvalue') }}">Search</a></button>
+    $.post("/searchvalue", {
+      data: searchvalue,
+    });
+  }
+</script>
+
+<div class="flex-container-row">
+  <form>
+    <input type="text" id="searchval" placeholder="Search github user" />
+    <a
+      style="text-decoration: none; color: black"
+      href="{{ url_for('searchvalue') }}"
+      ><button type="button" id="searchbtn" onclick="SearchFunction()">
+        Search
+      </button></a
+    >
+  </form>
+</div>
 
 {% endblock %}

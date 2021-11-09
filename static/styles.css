@@ -19,7 +19,7 @@ input {
 }
 
 button {
-  color: gainsboro;
+  color: black;
   opacity: 0.7;
   border-radius: 7.5px;
   transition: 0.5s;
@@ -29,6 +29,29 @@ button:hover {
   color: gray;
   opacity: 1;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+input,
+button {
+  border: 1px solid #85aeed;
+  border-radius: 10px;
+  padding: 1em;
+  background: none;
+  outline: none;
+}
+
+#searchval,
+#searchbtn {
+  padding: 1em;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .user {
@@ -44,15 +67,6 @@ button:hover {
 .user:hover {
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
   opacity: 1;
-}
-
-input,
-button {
-  border: 1px solid #85aeed;
-  border-radius: 10px;
-  padding: 1em;
-  background: none;
-  outline: none;
 }
 
 .flex-container {
