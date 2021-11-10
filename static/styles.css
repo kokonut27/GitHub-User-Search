@@ -10,7 +10,7 @@ body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
 
-img {
+img#banner {
   width: 25%;
 }
 

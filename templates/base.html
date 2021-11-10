@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub User Search</title>
-    <link
+    <!-- <link
       rel="shortcut icon"
       href="{{ url_for('static', filename='favicon.svg') }}"
-    />
+    /> -->
     <link
       href="{{ url_for('static', filename='styles.css') }}"
       rel="stylesheet"
@@ -43,19 +43,21 @@
       >
     </div>
 
-    <a href="/"
-      ><img src="{{ url_for('static', filename='image.png') }}" /><a>
-        <!-- <br><br> -->
+    <a href="/"><img src="{{ url_for('static', filename='image.png') }}" /></a>
+    <!-- <br><br> -->
 
-        <div class="flex-container">{% block content %}{% endblock %}</div>
+    <div class="flex-container">{% block content %}{% endblock %}</div>
 
-        <!-- <br><br><br><br><br><br><br> -->
-        <footer>
-          <h5 class="footer">Copyright &copy 2021 JBYT27</h5>
-        </footer>
-        <!-- </body> -->
-        <!-- </html> --></a
-      ></a
-    >
+    <!-- <br><br><br><br><br><br><br> -->
+    <footer>
+      <h5 id="footer">Copyright &copy 2021 JBYT27</h5>
+      <h4 id="footer">
+        View on
+        <img src="{{ url_for('static', filename='github.png') }}" width="1%" />
+        <a href="https://github.com/JBYT27/GitHub-User-Search" target="_blank"
+          >GitHub</a
+        >
+      </h4>
+    </footer>
   </body>
 </html>
