@@ -43,7 +43,8 @@
       >
     </div>
 
-    <a href="/"><img src="{{ url_for('static', filename='image.png') }}" /></a>
+    <h1 class="title">GitHub User Search</h1>
+    <!-- <a href="/"><img src="{{ url_for('static', filename='image.png') }}" /></a> -->
     <!-- <br><br> -->
 
     <div class="flex-container">{% block content %}{% endblock %}</div>
@@ -53,9 +54,11 @@
       <h5 id="footer">Copyright &copy 2021 JBYT27</h5>
       <h4 id="footer">
         View on
-        <img src="{{ url_for('static', filename='github.png') }}" width="1%" />
         <a href="https://github.com/JBYT27/GitHub-User-Search" target="_blank"
-          >GitHub</a
+          ><img
+            src="{{ url_for('static', filename='github.png') }}"
+            width="1%"
+          />GitHub</a
         >
       </h4>
     </footer>

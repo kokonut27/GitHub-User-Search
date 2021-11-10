@@ -4,6 +4,10 @@ div {
   text-align: center;
 }
 
+h1.title {
+  font-size: 4rem;
+}
+
 body {
   background-color: white;
   text-align: center;

@@ -19,12 +19,12 @@
 
 <a style="color: black" href="{{ userurl }}">
   <div class="user">
-    <!-- <img
-      src="{{ url_for('static', filename=avatar) }}"
+    <img
+      src="{{url_for('static', filename=avatar)}}"
       id="banner"
       height="75"
       width="75"
-    /> -->
+    />
     <h2 style="display: inline-block; text-indent: 5px">{{ usernick }}</h2>
     <h4 style="margin: 0">@{{ username }}</h4>
     <p style="color: #545a63">{{ bio }}</p>

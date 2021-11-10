@@ -18,7 +18,7 @@ app.config["SESSION_PERMANENT"] = False
 try:
     app.config["REPL_USER"] = os.environ["REPL_OWNER"]
 except:
-    app.config["REPL_USER"] = "DillonB"
+    app.config["REPL_USER"] = "DillonB07"
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["static"] = 'static/'
 git_api.Token(os.environ["token"])
@@ -34,6 +34,7 @@ def index():
 
 @app.route('/search')
 def search():
+    print(session.get('avatar'))
     return render_template(
         "search.html",
         usernick=session.get("usernick"),
