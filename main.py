@@ -123,7 +123,7 @@ def page_not_found(e):
 
 @app.errorhandler(500)
 def page_not_found2(e):
-  return render_template("505.html") 
+  return render_template("500.html") 
 # The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!
   
 app.run(host="0.0.0.0", port=8080)
