@@ -121,8 +121,9 @@ def avatar():
 def page_not_found(e):
   return render_template('404.html')
 
-"""@app.errorhandler(500)
+@app.errorhandler(500)
 def page_not_found2(e):
-  return render_template("nouser.html") # The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!"""
+  return render_template("505.html") 
+# The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!
   
 app.run(host="0.0.0.0", port=8080)
