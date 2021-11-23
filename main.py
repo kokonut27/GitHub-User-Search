@@ -32,25 +32,12 @@ def index():
     )
 
 
-@app.route('/search')
-def search():
-    print(session.get('avatar'))
-    return render_template(
-        "search.html",
-        usernick=session.get("usernick"),
-        username=session.get("username"),
-        avatar=session.get("avatar"),
-        userurl=session.get("userurl"),
-        bio=session.get("bio"),
-    )
-
-
 @app.route('/nouser')
 def nouser():
     return render_template("nouser.html")
 
 
-@app.route('/searchvalue', methods=["POST", "GET"])
+@app.route('/search', methods=["POST", "GET"])
 def searchvalue():
     # global name
     if request.method == "POST":
@@ -100,16 +87,32 @@ def searchvalue():
             pass  # add something here - error
 
         session["usernick"] = name
-        if session.get("usernick") == None:
+        if session.get("usernick") is None:
             session["usernick"] = "No Nickname!"
         session["username"] = username
         session["avatar"] = avatar
         session["userurl"] = userurl
         session["bio"] = bio
-        if session.get("bio") == None:
+        if session.get("bio") is None:
             session["bio"] = "This user does not have a bio"
         session["avatarYN"] = "False"
-    return redirect(url_for('search'))
+    # return redirect(url_for('search'))
+    else:
+        session["usernick"] = "No User Exists!"
+        session["username"] = "NoUserExists"
+        session["avatar"] = 'nothing.jpg'
+        session["userurl"] = "https://github.com/404"
+        session["bio"] = "This user does not have a bio"
+        session["avatarYN"] = "True"
+
+    return render_template(
+        "search.html",
+        usernick=session.get("usernick"),
+        username=session.get("username"),
+        avatar=session.get("avatar"),
+        userurl=session.get("userurl"),
+        bio=session.get("bio"),
+    )
 
 
 '''@app.route('/delete_session')
