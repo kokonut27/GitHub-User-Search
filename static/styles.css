@@ -53,9 +53,9 @@ button {
   padding: 1em;
 }
 
-.flex-container-row {
+.flex-container-column {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -65,8 +65,9 @@ button {
 .user {
   border: 3px solid #85aeed;
   border-radius: 15px;
-  width: 30%;
-  margin: auto;
+  /* width: 30%; */
+  padding: 2em;
+  margin: 1em;
   opacity: 0.9;
   transition: 0.7s;
   color: #333;

@@ -27,9 +27,7 @@ Session(app)
 
 @app.route('/')
 def index():
-    return render_template(
-        "index.html",
-    )
+    return render_template("index.html", )
 
 
 @app.route('/nouser')
@@ -37,7 +35,17 @@ def nouser():
     return render_template("nouser.html")
 
 
-@app.route('/search', methods=["POST", "GET"])
+@app.route('/search')
+def search():
+    return render_template("search.html",
+                           usernick=session.get("usernick"),
+                           username=session.get("username"),
+                           avatar=session.get("avatar"),
+                           userurl=session.get("userurl"),
+                           bio=session.get("bio"))
+
+
+@app.route('/searchvalue', methods=["POST", "GET"])
 def searchvalue():
     # global name
     if request.method == "POST":
@@ -47,6 +55,7 @@ def searchvalue():
         session["userurl"] = "https://github.com/404"
         session["bio"] = "This user does not have a bio"
         session["avatarYN"] = "True"
+        print(f"sessuin avatarYN - {session['avatarYN']}")
         data2 = request.form["data"]
         """url = "https://github.com/"+data2
     userexist = requests.get(url)
@@ -64,17 +73,18 @@ def searchvalue():
         bio = data["data"]["user"]["bio"]
         username = data2
 
-        image_url = data["data"]["user"]["avatarLink"]
-        filename = image_url.split("/")[-1]
+        image_url = data["data"]["user"][
+            "avatarLink"]  # - Possibly just send this to the Jinja template
+
+        filename = image_url.split("/")[-1].split('?')[0]
         res = requests.get(image_url, stream=True)
         if res.status_code == 200:
             res.raw.decode_content = True
 
-            with open("static/"+filename, 'wb') as f:
+            with open(f"static/{filename}", 'wb') as f:
                 shutil.copyfileobj(res.raw, f)
 
             avatar = filename
-
             """if session.get("avatarYN") == "True":
         if avatar != None:
           session["avatarYN"] = "False"
@@ -87,32 +97,17 @@ def searchvalue():
             pass  # add something here - error
 
         session["usernick"] = name
-        if session.get("usernick") is None:
+        if session.get("usernick") == None:
             session["usernick"] = "No Nickname!"
         session["username"] = username
         session["avatar"] = avatar
         session["userurl"] = userurl
         session["bio"] = bio
-        if session.get("bio") is None:
+        if session.get("bio") == None:
             session["bio"] = "This user does not have a bio"
         session["avatarYN"] = "False"
-    # return redirect(url_for('search'))
-    else:
-        session["usernick"] = "No User Exists!"
-        session["username"] = "NoUserExists"
-        session["avatar"] = 'nothing.jpg'
-        session["userurl"] = "https://github.com/404"
-        session["bio"] = "This user does not have a bio"
-        session["avatarYN"] = "True"
+    return redirect(url_for('search'))
 
-    return render_template(
-        "search.html",
-        usernick=session.get("usernick"),
-        username=session.get("username"),
-        avatar=session.get("avatar"),
-        userurl=session.get("userurl"),
-        bio=session.get("bio"),
-    )
 
 
 '''@app.route('/delete_session')
@@ -128,9 +123,9 @@ def delete_session():
 
 @app.route('/avatar')
 def avatar():
-    return send_from_directory(
-        'static/', session["avatar"], as_attachment=True
-    )
+    return send_from_directory('static/',
+                               session["avatar"],
+                               as_attachment=True)
 
 
 @app.errorhandler(404)
@@ -141,7 +136,6 @@ def page_not_found(e):
 """@app.errorhandler(500)
 def page_not_found2(e):
   return render_template("nouser.html") # The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!"""
-
 
 if __name__ == "__main__":
     # app.run(host='0.0.0.0', port=8080)
