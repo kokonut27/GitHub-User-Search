@@ -1,62 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub User Search</title>
-    <!-- <link
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>GitHub User Search</title>
+	<!-- <link
       rel="shortcut icon"
       href="{{ url_for('static', filename='favicon.svg') }}"
     /> -->
-    <link
-      href="{{ url_for('static', filename='styles.css') }}"
-      rel="stylesheet"
-    />
-    {% block head %}{% endblock %}
-  </head>
-  <body>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+	<link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" /> {% block head %}{% endblock %}
+</head>
 
-    <!--
-    <div class="beta">
-      Beta
-    </div>
-    -->
-    <div class="flex-container">
-      <a class="navbar" href="/">Home</a>
-      <a class="navbar" href="https://github.com/JBYT27" target="_blank"
-        >Owner</a
-      >
-      <a
-        class="navbar"
-        href="https://github.com/JBYT27/GitHub-User-Search/blob/main/README.md"
-        target="_blank"
-        >Docs</a
-      >
-      <a class="navbar" href="https://github.com/JBYT27/GitAPI" target="_blank"
-        >GitAPI</a
-      >
-    </div>
+<body>
+	<script src="{{ url_for('static', filename='script.js') }}">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	 crossorigin="anonymous">
+	</script>
 
-    <h1 class="title">GitHub User Search</h1>
-    <!-- <a href="/"><img src="{{ url_for('static', filename='image.png') }}" /></a> -->
-    <!-- <br><br> -->
+	<div class="flex-container">
+		<nav>
+			<a class="navbar" href="/">Home</a>
+			<a class="navbar" href="https://github.com/JBYT27" target="_blank">Owner</a>
+			<a class="navbar" href="https://github.com/JBYT27/GitHub-User-Search/blob/main/README.md" target="_blank">Docs</a>
+			<a class="navbar" href="https://github.com/JBYT27/GitAPI" target="_blank">GitAPI</a>
+		</nav>
+	</div>
+
+    <div class='flex-container-column'>
+        <img class='banner' src="{{ url_for('static', filename='github_mark_120.png') }}" alt='GitHub logo'/>
+        <h1 class="title"><a href="/">User Search</a></h1>
+    </div>
 
     <div class="flex-container-column">{% block content %}{% endblock %}</div>
 
-    <!-- <br><br><br><br><br><br><br> -->
     <footer>
       <h5 id="footer">Copyright &copy 2021 JBYT27</h5>
       <h4 id="footer">
         View on
         <a href="https://github.com/JBYT27/GitHub-User-Search" target="_blank"
           ><img
-            src="{{ url_for('static', filename='github.png') }}"
+            src="{{ url_for('static', filename='github_mark.png') }}"
             width="1%"
           />GitHub</a
         >
