@@ -93,7 +93,7 @@ button {
 }
 
 a.navbar {
-  margin: 0 1em;
+  margin: 0 1em 1em 1em;
   overflow: hidden;
   background-color: #85aeed;
   color: #333;
