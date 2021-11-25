@@ -73,7 +73,7 @@ def searchvalue():
         username = data2
 
         image_url = data["data"]["user"][
-            "avatarLink"]  # - Possibly just send this to the Jinja template
+            "avatarLink"]
 
         filename = image_url.split("/")[-1].split('?')[0]
         res = requests.get(image_url, stream=True)
@@ -135,5 +135,4 @@ def page_not_found2(e):
   return render_template("nouser.html") # The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!"""
 
 if __name__ == "__main__":
-    # app.run(host='0.0.0.0', port=8080)
-    app.run(debug=True, host="0.0.0.0", port=3000)
+    app.run(host="0.0.0.0", port=3000)
