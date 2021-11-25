@@ -5,7 +5,9 @@ div {
 }
 
 h1.title {
+  margin-top: 0px;
   font-size: 4rem;
+  color: black;
 }
 
 body {
@@ -14,8 +16,13 @@ body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
 
-img#banner {
-  width: 25%;
+img.no-margin {
+    margin: 0;
+}
+
+img.banner {
+  display: block;
+  width: 15%;
 }
 
 a {
@@ -56,16 +63,18 @@ button {
 .flex-container-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-items: center;
   align-items: center;
-  flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 3px solid #85aeed;
   border-radius: 15px;
-  /* width: 30%; */
+  width: 100%;
   padding: 2em;
   margin: 1em;
   opacity: 0.9;
@@ -89,13 +98,16 @@ a.navbar {
   background-color: #85aeed;
   color: #333;
   border-radius: 15px;
-  /* width: 15%; */
   display: inline-flex;
   text-align: center;
   text-decoration: none;
   padding: 1em 8em;
   opacity: 0.7;
   transition: 0.75s;
+}
+
+nav {
+    margin: 1em 1em 5em 1em;
 }
 
 @media screen {

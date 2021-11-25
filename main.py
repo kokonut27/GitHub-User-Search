@@ -55,7 +55,6 @@ def searchvalue():
         session["userurl"] = "https://github.com/404"
         session["bio"] = "This user does not have a bio"
         session["avatarYN"] = "True"
-        print(f"sessuin avatarYN - {session['avatarYN']}")
         data2 = request.form["data"]
         """url = "https://github.com/"+data2
     userexist = requests.get(url)
@@ -80,11 +79,10 @@ def searchvalue():
         res = requests.get(image_url, stream=True)
         if res.status_code == 200:
             res.raw.decode_content = True
-
-            with open(f"static/{filename}", 'wb') as f:
+            with open(f"static/avatars/{filename}", 'wb') as f:
                 shutil.copyfileobj(res.raw, f)
 
-            avatar = filename
+            avatar = f'avatars/{filename}'
             """if session.get("avatarYN") == "True":
         if avatar != None:
           session["avatarYN"] = "False"
@@ -92,7 +90,6 @@ def searchvalue():
             app.config['static'], filename, as_attachment=True
           )"""
 
-            f.close()
         else:
             pass  # add something here - error
 
