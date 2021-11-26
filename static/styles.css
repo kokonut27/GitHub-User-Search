@@ -16,7 +16,6 @@ body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
 
-
 img.banner {
   display: block;
   width: 15%;
@@ -24,7 +23,7 @@ img.banner {
 
 img.github-banner {
   display: block;
-  width: 10%
+  width: 10%;
 }
 
 a {
