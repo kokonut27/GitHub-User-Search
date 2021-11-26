@@ -16,13 +16,15 @@ body {
   font-family: "Encode Sans Condensed", sans-serif;
 }
 
-img.no-margin {
-    margin: 0;
-}
 
 img.banner {
   display: block;
   width: 15%;
+}
+
+img.github-banner {
+  display: block;
+  width: 10%
 }
 
 a {
