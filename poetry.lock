@@ -57,7 +57,7 @@ Flask = ">=0.8"
 
 [[package]]
 name = "git-api"
-version = "1.7.1"
+version = "1.7.5"
 description = "A GitHub API. Extracts data from GitHub into json style data."
 category = "main"
 optional = false
@@ -107,7 +107,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "e4ffaea178c4ac5eea10316193340829e87bea3965a947edcd6c7ba5b2ba6c65"
+content-hash = "c07d0e5530787c15a9a1eb88512e5113c3642f7384ed81633f1c0f374f899e39"
 
 [metadata.files]
 cachelib = [
@@ -131,8 +131,8 @@ flask-session = [
     {file = "Flask_Session-0.4.0-py2.py3-none-any.whl", hash = "sha256:1e3f8a317005db72c831f85d884a5a9d23145f256c730d80b325a3150a22c3db"},
 ]
 git-api = [
-    {file = "git_api-1.7.1-py3-none-any.whl", hash = "sha256:72d3114eb426ac52c34b9169e71149f734307e4709608f57473d3eae35c54583"},
-    {file = "git_api-1.7.1.tar.gz", hash = "sha256:7491f607eda1e666a544e3380a0e261adca13c1c87d7c6ac902fba2f6f694ce3"},
+    {file = "git_api-1.7.5-py3-none-any.whl", hash = "sha256:71a8c7e7b0a7ada2f2a6ad3bc69cb5713f156f6681b58b39b666d4b72b7d273c"},
+    {file = "git_api-1.7.5.tar.gz", hash = "sha256:57ec1c2a731480ccb3b2a570d4fc4bc6c43d21a716cba5d887804dd5871e8dd9"},
 ]
 itsdangerous = [
     {file = "itsdangerous-2.0.1-py3-none-any.whl", hash = "sha256:5174094b9637652bdb841a3029700391451bd092ba3db90600dea710ba28e97c"},
