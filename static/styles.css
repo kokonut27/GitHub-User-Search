@@ -18,7 +18,7 @@ body {
 
 img.banner {
   display: block;
-  width: 15%;
+  /* width: 15%; */
 }
 
 img.github-banner {
@@ -80,6 +80,7 @@ button {
   opacity: 0.9;
   transition: 0.7s;
   color: #333;
+  width: 30em; /* here */
 }
 
 .user:hover {

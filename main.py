@@ -71,25 +71,24 @@ def searchvalue():
         bio = data["data"]["user"]["bio"]
         username = data2
 
-        image_url = data["data"]["user"][
-            "avatarLink"]
+        image_url = data["data"]["user"]["avatarLink"]
 
-        filename = image_url.split("/")[-1].split('?')[0]
+        """filename = image_url.split("/")[-1].split('?')[0]
         res = requests.get(image_url, stream=True)
         if res.status_code == 200:
             res.raw.decode_content = True
             with open(f"static/avatars/{filename}", 'wb') as f:
                 shutil.copyfileobj(res.raw, f)
 
-            avatar = f'avatars/{filename}'
-            """if session.get("avatarYN") == "True":
+            # avatar = f'{app.config["static"]}avatars/{filename}'
+            avatar = f'avatars/{filename}'"""
+        """if session.get("avatarYN") == "True":
         if avatar != None:
           session["avatarYN"] = "False"
           return send_from_directory(
             app.config['static'], filename, as_attachment=True
           )"""
-        else:
-            pass  # add something here - error
+        avatar = image_url
 
 
         session["usernick"] = name
