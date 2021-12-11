@@ -40,8 +40,8 @@ The project link is [here](https://GitHub-User-Search.jbloves27.repl.co).
 - [ ] Dark mode/light mode - `[Status: PENDING]`
 - [x] GitHub user information - `[Status: COMPLETE]`
 - [x] CSS Animation - `[Status: IN PROGRESS]`
-  - [ ] Professional CSS - `[Status: INCOMPLETE]`
-- [ ] Additional features - `[Status: IN PROGRESS]`
-- [ ] Errors and error redirects - `[Status: IN PROGRESS]`
+  - [x] Professional CSS - `[Status: INCOMPLETE]`
+- [x] Additional features - `[Status: IN PROGRESS]`
+- [x] Errors and error redirects - `[Status: IN PROGRESS]`
 - [ ] Add docs - `[Status: IN PROGRESS]`
 - [ ] Add contributers route (maybe) - `[Status: PENDING]`
