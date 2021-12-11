@@ -134,4 +134,4 @@ def page_not_found2(e):
   return render_template("nouser.html") # The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!"""
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000, debug=True)
+    app.run(host="0.0.0.0", port=3000)
