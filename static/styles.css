@@ -88,6 +88,10 @@ button {
   opacity: 1;
 }
 
+div.link {
+    cursor: pointer;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
