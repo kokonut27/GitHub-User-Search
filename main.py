@@ -17,7 +17,7 @@ app.config["SECRET_KEY"] = os.environ["key"]
 app.config["SESSION_PERMANENT"] = False
 try:
     app.config["REPL_USER"] = os.environ["REPL_OWNER"]
-except:
+except KeyError:
     app.config["REPL_USER"] = "DillonB07"
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["static"] = 'static/'
@@ -27,7 +27,7 @@ Session(app)
 
 @app.route('/')
 def index():
-    return render_template("index.html", )
+    return render_template("index.html")
 
 
 @app.route('/nouser')
@@ -47,7 +47,6 @@ def search():
 
 @app.route('/searchvalue', methods=["POST", "GET"])
 def searchvalue():
-    # global name
     if request.method == "POST":
         session["usernick"] = "No User Exists!"
         session["username"] = "NoUserExists"
@@ -89,9 +88,9 @@ def searchvalue():
           return send_from_directory(
             app.config['static'], filename, as_attachment=True
           )"""
-
         else:
             pass  # add something here - error
+
 
         session["usernick"] = name
         if session.get("usernick") == None:
@@ -135,4 +134,4 @@ def page_not_found2(e):
   return render_template("nouser.html") # The most likely outcome is because the user doesn't exist, so we're assuming that because of that, it will always be a no user error. We could be wrong though!"""
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000)
+    app.run(host="0.0.0.0", port=3000, debug=True)
