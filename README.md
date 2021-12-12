@@ -35,11 +35,11 @@ The Code of Conduct is located [here](https://github.com/JBYT27/GitHub-User-Sear
 The project link is [here](https://GitHub-User-Search.jbloves27.repl.co). 
 
 ### Features
-- [ ] Dark mode/light mode - `[Status: PENDING]`
+- [x] Dark mode/light mode - `[Status: COMPLETE]`
 - [x] GitHub user information - `[Status: COMPLETE]`
-- [x] CSS Animation - `[Status: IN PROGRESS]`
-  - [x] Professional CSS - `[Status: INCOMPLETE]`
-- [x] Additional features - `[Status: IN PROGRESS]`
-- [x] Errors and error redirects - `[Status: IN PROGRESS]`
+- [ ] CSS Animation - `[Status: IN PROGRESS]`
+  - [ ] Professional CSS - `[Status: INCOMPLETE]`
+- [ ] Additional features - `[Status: IN PROGRESS]`
+- [x] Errors and error redirects - `[Status: COMPLETE]`
 - [ ] Add docs - `[Status: IN PROGRESS]`
 - [ ] Add contributers route (maybe) - `[Status: PENDING]`
