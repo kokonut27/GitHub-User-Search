@@ -80,7 +80,7 @@ button {
   opacity: 0.9;
   transition: 0.7s;
   color: #333;
-  width: 30em; /* here */
+  width: 30em;
 }
 
 .user:hover {
