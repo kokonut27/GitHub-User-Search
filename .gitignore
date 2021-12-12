@@ -6,3 +6,5 @@ debug.py
 /.vscode
 /__pycache__
 .dccache
+poetry.lock
+/flask_session
