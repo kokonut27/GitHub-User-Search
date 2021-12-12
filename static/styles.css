@@ -4,7 +4,7 @@ div {
   text-align: center;
 }
 
-h1.title {
+.title {
   margin-top: 0px;
   font-size: 4rem;
   color: black;
@@ -143,6 +143,43 @@ nav {
 
 .footer {
   bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    .title {
+        color: white;
+        text-decoration: none;
+    }
+
+    button {
+        color: white;
+    }
+
+    input, button {
+    	border: 1px solid #edc485;
+    }
+
+    .user {
+        border-color: #edc485;
+    }
+
+    .user:hover {
+        box-shadow: 10px 10px 20px 0px rgba(255, 255, 255, 0.75);
+    }
+
+    a.navbar {
+        background-color: #edc485;
+        color: #333;
+    }
+
+    .navbar:hover {
+        box-shadow: 10px 10px 20px 0px rgba(255, 255, 255, 0.75);
+    }
 }
 
 /* trashed as of right now
