@@ -1,10 +1,9 @@
 import git_api
-from flask import Flask, render_template, request, session, url_for, redirect, flash, send_from_directory
+from flask import Flask, render_template, request, session, url_for, redirect, send_from_directory
 import json
 import os
-from flask_session import Session
-import requests
 import shutil
+from flask_session import Session
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -22,13 +21,15 @@ except KeyError:
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["static"] = 'static/'
 git_api.Token(os.environ["token"])
-Session(app)
+Session(app) # The sessions are created here
 
 
 @app.route('/')
 def index():
+    # Reset flask_session folder
+    shutil.rmtree('flask_session')
+    os.mkdir("flask_session")
     return render_template("index.html")
-
 
 @app.route('/nouser')
 def nouser():

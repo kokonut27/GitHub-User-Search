@@ -4,7 +4,7 @@ div {
   text-align: center;
 }
 
-h1.title {
+.title {
   margin-top: 0px;
   font-size: 4rem;
   color: black;
@@ -80,7 +80,7 @@ button {
   opacity: 0.9;
   transition: 0.7s;
   color: #333;
-  width: 30em; /* here */
+  width: 30em;
 }
 
 .user:hover {
@@ -143,6 +143,44 @@ nav {
 
 .footer {
   bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    .title {
+        color: white;
+        text-decoration: none;
+    }
+
+    button {
+        color: white;
+    }
+
+    input, button {
+    	border: 1px solid #edc485;
+    }
+
+    .user, a.user:visited {
+        border-color: #edc485;
+        color: white;
+    }
+
+    .user:hover {
+        box-shadow: 10px 10px 20px 0px rgba(255, 255, 255, 0.75);
+    }
+
+    a.navbar {
+        background-color: #edc485;
+        color: #333;
+    }
+
+    .navbar:hover {
+        box-shadow: 10px 10px 20px 0px rgba(255, 255, 255, 0.75);
+    }
 }
 
 /* trashed as of right now
