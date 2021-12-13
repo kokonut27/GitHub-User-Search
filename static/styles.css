@@ -166,6 +166,7 @@ nav {
 
     .user {
         border-color: #edc485;
+        color: white;
     }
 
     .user:hover {
