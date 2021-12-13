@@ -164,7 +164,7 @@ nav {
     	border: 1px solid #edc485;
     }
 
-    .user {
+    .user, a.user:visited {
         border-color: #edc485;
         color: white;
     }
