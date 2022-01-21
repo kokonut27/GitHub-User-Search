@@ -93,13 +93,13 @@ def searchvalue():
 
 
         session["usernick"] = name
-        if session.get("usernick") == None:
+        if session.get("usernick") is None:
             session["usernick"] = "No Nickname!"
         session["username"] = username
         session["avatar"] = avatar
         session["userurl"] = userurl
         session["bio"] = bio
-        if session.get("bio") == None:
+        if session.get("bio") is None:
             session["bio"] = "This user does not have a bio"
         session["avatarYN"] = "False"
     return redirect(url_for('search'))
